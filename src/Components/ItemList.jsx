@@ -10,6 +10,7 @@ const ItemList = () => {
   const pushItem = () => {
     if (item.length > 0) {
       setItemContainer([...itemContainer, item]);
+      setItem("");
     }
   };
 
@@ -27,6 +28,7 @@ const ItemList = () => {
         <section className="min-w-full pt-[80px] flex flex-col gap-5 items-center justify-center">
           <input
             type="text"
+            value={item}
             placeholder="Enter item"
             onChange={(e) => setItem(e.target.value)}
             className="border-[3px] p-2 min-w-[50%] border-black rounded-md text-[28px] outline-none"
